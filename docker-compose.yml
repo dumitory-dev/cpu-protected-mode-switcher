@@ -1,0 +1,9 @@
+version: "3.9"
+services:
+  os-build:
+    build: ./docker/
+    volumes:
+      - ./:/project
+      - ./build/:/project/build
+    working_dir: /project
+    command: bash -c "./build.sh"
